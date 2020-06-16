@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+    id 'org.openjfx.javafxplugin' version '0.0.8'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    implementation files('libs/jogamp-fat.jar')
+    implementation files('libs/dockfx-0.4-SNAPSHOT.jar')
+}
+
+javafx {
+    version = "14"
+    modules = ["javafx.controls", "javafx.fxml"]
+}
